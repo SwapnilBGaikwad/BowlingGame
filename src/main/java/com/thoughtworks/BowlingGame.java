@@ -4,16 +4,16 @@ import java.util.LinkedList;
 import java.util.List;
 
 public class BowlingGame {
-    private final Roll[] rolls;
+    private final int[] rolls;
 
-    public BowlingGame( Roll... rolls ) {
+    public BowlingGame( int... rolls ) {
         this.rolls = rolls;
     }
 
     public int totalScore() {
         final List<Turn> turns = new LinkedList<>();
         Turn turn = new Turn();
-        for ( Roll roll : rolls ) {
+        for ( int roll : rolls ) {
             turn.addRoll( roll );
             if ( turn.isFinished() ) {
                 turns.add( turn );

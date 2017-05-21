@@ -16,10 +16,8 @@ public class TurnTest {
 
     @Test
     public void isFinishedReturnsTrueIfRollAddedWithNoScoreLessThan10() {
-        Roll roll = new Roll( 8 );
-        turn.addRoll( roll );
-        roll = new Roll( 1 );
-        turn.addRoll( roll );
+        turn.addRoll( 8 );
+        turn.addRoll( 1 );
 
         assertThat( turn.isFinished(), is( true ) );
         assertThat( turn.score(), is( 9 ) );
@@ -27,8 +25,7 @@ public class TurnTest {
 
     @Test
     public void isFinishedReturnsFalseIfRollAddedWithScore10() {
-        Roll roll = new Roll( 10 );
-        turn.addRoll( roll );
+        turn.addRoll( 10 );
 
         assertThat( turn.isFinished(), is( false ) );
         assertThat( turn.score(), is( 10 ) );
@@ -36,12 +33,9 @@ public class TurnTest {
 
     @Test
     public void isFinishedReturnsFalseIfRollAddedWithScore8And2And4() {
-        Roll roll = new Roll( 8 );
-        turn.addRoll( roll );
-        roll = new Roll( 2 );
-        turn.addRoll( roll );
-        roll = new Roll( 4 );
-        turn.addRoll( roll );
+        turn.addRoll( 8 );
+        turn.addRoll( 2 );
+        turn.addRoll( 4 );
 
         assertThat( turn.isFinished(), is( true ) );
         assertThat( turn.score(), is( 14 ) );
@@ -49,12 +43,9 @@ public class TurnTest {
 
     @Test
     public void isFinishedReturnsFalseIfRollAddedWithScore10And2And4() {
-        Roll roll = new Roll( 10 );
-        turn.addRoll( roll );
-        roll = new Roll( 2 );
-        turn.addRoll( roll );
-        roll = new Roll( 4 );
-        turn.addRoll( roll );
+        turn.addRoll( 10 );
+        turn.addRoll( 2 );
+        turn.addRoll( 4 );
 
         assertThat( turn.isFinished(), is( true ) );
         assertThat( turn.score(), is( 16 ) );
@@ -62,12 +53,9 @@ public class TurnTest {
 
     @Test
     public void shouldNotHaveAnyIncreaseInScoreAfterTurnCompletion() {
-        Roll roll = new Roll( 6 );
-        turn.addRoll( roll );
-        roll = new Roll( 2 );
-        turn.addRoll( roll );
-        roll = new Roll( 4 );
-        turn.addRoll( roll );
+        turn.addRoll( 6 );
+        turn.addRoll( 2 );
+        turn.addRoll( 4 );
 
         assertThat( turn.isFinished(), is( true ) );
         assertThat( turn.score(), is( 8 ) );

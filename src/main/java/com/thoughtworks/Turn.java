@@ -11,11 +11,11 @@ class Turn {
         this.maxRolls = 2;
     }
 
-    void addRoll( Roll roll ) {
+    void addRoll( int roll ) {
         if ( ( rollsCounter + 1 ) > maxRolls ) {
             return;
         }
-        score += roll.getScore();
+        score += roll;
         rollsCounter++;
         if ( rollsCounter == 2 && score >= 10 ) {
             maxRolls = 3;
