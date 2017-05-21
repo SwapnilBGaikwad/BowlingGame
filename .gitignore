@@ -1,0 +1,6 @@
+.DS_Store
+.idea/
+Algorithms.iml
+out/
+.gradle/
+build/
