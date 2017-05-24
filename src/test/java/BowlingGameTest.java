@@ -12,7 +12,7 @@ public class BowlingGameTest {
     public void returnTotalScoreOfGameAfterRolls() {
         List<Integer> rolls = new ArrayList<>();
         rolls.add( 10 );
-         rolls.add( 4 );
+        rolls.add( 4 );
         rolls.add( 4 );
 
         rolls.add( 3 );
