@@ -19,7 +19,7 @@ public class BowlingGameTest {
         rolls.add( 4 );
 
         rolls.add( 8 );
-        rolls.add( 2 );
+        rolls.add( 2 ); 
         rolls.add( 6 );
 
         rolls.add( 4 );
