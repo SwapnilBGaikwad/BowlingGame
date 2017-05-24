@@ -29,7 +29,7 @@ public class BowlingGameTest {
         rolls.add( 6 );
 
         int[] rollsInt = getIntArray( rolls );
-        final BowlingGame game = new BowlingGame( rollsInt );
+        final BowlingGame game = new BowlingGame( rollsInt ); 
 
         assertThat( game.totalScore(), is( 57 ) );
     }
